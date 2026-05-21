@@ -31,7 +31,7 @@
           
             <div class="meta">
               <span>Pronta entrega</span>
-              <a href="/produto">Ver detalhes</a>
+              <a href="/produto?nome={{ urlencode($produto['nome']) }}">Ver detalhes</a>
             </div>
           </div>
         </article>
