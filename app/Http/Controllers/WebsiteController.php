@@ -10,13 +10,17 @@ class WebsiteController extends Controller{
     {
         $produtos = [
             [
-
-                'nome'  => 'Tênis Casual',
+                'nome'  => 'Tênis',
+                'preco' => 299.90, 
+                'img'   => 'assets/img/product2.svg',
+            ],
+            [
+                'nome'  => 'Casa',
                 'preco' => 149.90,
                 'img'   => 'assets/img/product3.svg',
             ],
             [
-                'nome'  => 'Tênis Running',
+                'nome'  => 'Fone',
                 'preco' => 249.90,
                 'img'   => 'assets/img/product4.svg',
             ]

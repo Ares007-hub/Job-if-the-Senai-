@@ -59,7 +59,7 @@
           <h2>Visual elegante, seções bem distribuídas e navegação fluida.</h2>
           <p>Ideal para apresentar uma marca, vender produtos e transmitir confiança logo na primeira dobra.</p>
         </div>
-        <a class="btn btn-light" href="/checkout">Testar checkout</a>
+        <a class="btn btn-light" href="/checkout" >Testar checkout</a>
       </div>
     </section>
 
