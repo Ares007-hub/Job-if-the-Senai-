@@ -5,15 +5,12 @@ namespace App\Http\Controllers;
 use App\Http\Controllers; 
 
 class WebsiteController extends Controller{
+
     public function home() 
     {
         $produtos = [
             [
-                'nome'  => 'Tênis Esportivo',
-                'preco' => 299.90, 
-                'img'   => 'assets/img/product2.svg',
-            ],
-            [
+
                 'nome'  => 'Tênis Casual',
                 'preco' => 149.90,
                 'img'   => 'assets/img/product3.svg',
@@ -51,8 +48,18 @@ class WebsiteController extends Controller{
         return view('website.catalogo', compact('produtos'));
     }
 
-    public function produto()
-    {
-        return view('produto');
+    public function contato(){
+        return view('website.contato');
     }
+    public function carrinho(){
+        return view('website.carrinho');
+    }
+    public function checkout(){
+        return view('website.checkout');
+    }
+    public function produto(){
+        return view('website.produto');
+    }
+
+
 }

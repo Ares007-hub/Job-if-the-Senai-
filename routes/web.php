@@ -3,19 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 route::get('/', 'App\Http\Controllers\WebsiteController@home' );
+route::get('/catalogo', 'App\Http\Controllers\WebsiteController@catalogo' );
+route::get('/contato', 'App\Http\Controllers\WebsiteController@contato' );
+route::get('/carrinho', 'App\Http\Controllers\WebsiteController@carrinho' );
+route::get('/checkout', 'App\Http\Controllers\WebsiteController@checkout' );
+route::get('/produto', 'App\Http\Controllers\WebsiteController@produto' );
 
-Route::get('/carrinho', function () {
-    return view('carrinho');
-}); 
-Route::get('/checkout', function () {
-    return view('checkout');
-});
-Route::get('/contato', function () {
-    return view('contato');
-});
-Route::get('/produto', function () {
-    return view('produto');
-}); 
 
 route:: prefix('/admin')->group (function () {
     Route::get('/configuracoes', function () {
@@ -35,5 +28,3 @@ route:: prefix('/admin')->group (function () {
 Route::get('/admin', function () {
     return view('admin.index');
 });
-
-route::get('/catalogo', 'App\Http\Controllers\WebsiteController@catalogo' );
