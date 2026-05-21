@@ -29,42 +29,26 @@
         </div>
 
         <div class="grid-4">
-          <article class="card">
-            <img src="assets/img/product1.svg" alt="Tenis Urban" />
-            <div class="product-body">
-              <span class="tag">Moda urbana</span>
-              <h3>Tenis Urban</h3>
-              <div class="price" data-price="289.9"></div>
-              <div class="meta"><span>4.9 estrelas</span><span>12x sem juros</span></div>
+          @foreach($produtos as $produto)
+        <article class="card">
+          <img src="{{ asset($produto['img']) }}" alt="{{ $produto['nome'] }}">
+          
+          <div class="product-body">
+            <span class="tag">Produto</span> 
+            
+            <h3>{{ $produto['nome'] }}</h3>
+            
+            <div class="price">
+              R$ {{ number_format($produto['preco'], 2, ',', '.') }}
             </div>
-          </article>
-          <article class="card">
-            <img src="assets/img/product2.svg" alt="Mochila Pro" />
-            <div class="product-body">
-              <span class="tag">Acessorios</span>
-              <h3>Mochila Pro</h3>
-              <div class="price" data-price="229.9"></div>
-              <div class="meta"><span>Mais vendida</span><span>Entrega rapida</span></div>
+          
+            <div class="meta">
+              <span>Pronta entrega</span>
+              <a href="/produto">Ver detalhes</a>
             </div>
-          </article>
-          <article class="card">
-            <img src="assets/img/product3.svg" alt="Relogio Edge" />
-            <div class="product-body">
-              <span class="tag">Lifestyle</span>
-              <h3>Relogio Edge</h3>
-              <div class="price" data-price="399.9"></div>
-              <div class="meta"><span>Edicao premium</span><span>Garantia 1 ano</span></div>
-            </div>
-          </article>
-          <article class="card">
-            <img src="assets/img/product4.svg" alt="Headphone Air" />
-            <div class="product-body">
-              <span class="tag">Tech</span>
-              <h3>Headphone Air</h3>
-              <div class="price" data-price="519.9"></div>
-              <div class="meta"><span>Noise canceling</span><span>Frete gratis</span></div>
-            </div>
-          </article>
+          </div>
+        </article>
+      @endforeach
         </div>
       </div>
     </section>

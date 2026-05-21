@@ -2,11 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-route::get('/', 'App\Http\Controllers\WebsiteControllers@index' );
+route::get('/', 'App\Http\Controllers\WebsiteController@home' );
 
-Route::get('/', function () {
-    return view('home');
-});
 Route::get('/carrinho', function () {
     return view('carrinho');
 }); 

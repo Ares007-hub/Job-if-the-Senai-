@@ -25,7 +25,7 @@ class WebsiteController extends Controller{
             ]
         ];
         
-        return view('website.index', compact('produtos'));
+        return view('website.home', compact('produtos'));
     }
 
     public function catalogo() 
